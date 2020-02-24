@@ -1,12 +1,46 @@
+# Chama The App - Test Engineer Assignment
+
+For this assignment, I used RSpec and didn't use BDD. Since BDD uses the behavior and it's an API, I thought that'll make more sense test it making sure that our application will be able to consume the data needed.
+
+### Installation and usage
+
+##### Download Ruby (Stable Version):
+
+[Ruby Version Manager (RVM)](https://rvm.io/)
+
+##### Download Bundler (manage ruby gems):
+    
+    gem install bundler
+
+##### Clone the project:
+    
+    git clone https://github.com/murilopmachado/chamatheapp_assignment.git
+
+##### Download dependencies:
+In terminal at the project root:
+    
+    bundle install
+
+##### In terminal at the project root:
+
+    rspec spec/osrm_spec.rb 
+
+Every run creates an HTML report using TimeStamp in the name and making sure that we can track the results later.
+
+## Questions
+
 #### Question 1
 ##### Write two integration tests for OSRM's HTTP API using a testing framework of your choice.
 
-For this question, I've tried to have the maximum coverage possible in two scenarios.
-I've created a class with a constructor to perform the requests if needed in the future efficiently. That'll make the creation of new scenarios easier and faster.
+For this question, I've tried to have the maximum coverage possible in two scenarios. I've created a class with a constructor to perform the requests if needed to make the creation of new scenarios easier and faster.
 
-* The first scenario uses a schema to check the response.
-* The second one tries to request with invalid parameters.
+Scenarios:
 
+- Execute valid routing requests with success using valid coordinates
+- Execute invalid routing requests with failure using invalid coordinates.
+
+Both scenarios check the response json schema to assure that our key and values are OK. 
+The schema's in data/schemas/, and it's fair easy to update.
 
 #### Question 2
 ##### Describe how the tests you have written could be integrated into a fully automated CI/CD pipeline.
@@ -28,8 +62,6 @@ Bellow one example of a pipeline containing the tests:
    * Pull the automation code;
 * Execute the automation;
 
-The point in split in two jobs (One to configure the environment and another to run the container) It's in that way we'll have more concise errors with that making it easier to troubleshoot later if needed.
+The point is split into two jobs (One to configure the environment and another to run the container) It's in that way we'll have more concise errors with that making it easier to troubleshoot later if needed.
 
-Depending the tool (Jenkins, Circle, Bamboo, Travis) could change the way used to configure the environment.
-
-To create the schema, I've used json-schema-generator gem. In the future, if needed, we can create a hook or a job that'll always generate a new schema, that way making sure that we have the most updated json_schema version.
+Depending on the tool (Jenkins, Circle, Bamboo, Travis) could change the way to configure the environment.
