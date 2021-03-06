@@ -1,6 +1,6 @@
-# Chama The App - Test Engineer Assignment
+# Schema Validation
 
-For this assignment, I used RSpec and didn't use BDD. Since BDD uses the behavior and it's an API, I thought that'll make more sense test it making sure that our application will be able to consume the data needed.
+This repository stores a project to perform automated contract tests using Ruby, Ajv, Draft schemas;
 
 ### Installation and usage
 
