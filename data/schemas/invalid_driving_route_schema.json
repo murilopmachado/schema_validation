@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-03/schema#",
-  "description": "Generated from schema.json with shasum 45d7da5770b62a6c56a3d0c8df29c58ea937af51",
   "type": "object",
   "required": true,
   "properties": {
