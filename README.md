@@ -1,6 +1,6 @@
 # Schema Validation
 
-This repository stores a project to perform automated contract tests using Ruby, Ajv, Draft schemas;
+This repository stores a project to perform automated contract tests using Ruby, json-schema, Draft schemas;
 
 ### Installation and usage
 
