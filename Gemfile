@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'pry'
-gem 'rest-client'
+gem 'faraday'
 gem 'rspec'
 gem 'json-schema'

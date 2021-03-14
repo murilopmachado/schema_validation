@@ -2,9 +2,7 @@
 require 'rspec'
 require 'yaml'
 require 'pry'
-require 'rest-client'
-require 'erb'
-require_relative './helpers/request'
+require 'faraday'
 require_relative './helpers/schema_validator'
 
 # Load data used for tests as DATA

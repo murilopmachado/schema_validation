@@ -1,16 +1,7 @@
 # Host URL
 host:
-  osrm: "http://localhost:5000"
+  base: "https://jsonplaceholder.typicode.com"
 
 # URL Path
 path:
-  driving_route: "/route/v1/driving/<%= @coordinates %>"
-
-# Query Params for the requests
-query_params:
-  routing_method: "?steps=true"
-
-# Data used in tests
-regular_test_data:
-  valid_coordinates: "13.388860,52.517037;13.385983,52.496891"
-  invalid_coordinates: "999999.999999,9999.99999;999999.999999,9999.99999"
+  posts: "/posts"

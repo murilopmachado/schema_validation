@@ -1,5 +1,4 @@
 require "json-schema"
-require_relative './unique_items_patch'
 
 class SchemaValidator
   class << self
@@ -9,8 +8,8 @@ class SchemaValidator
       rescue JSON::Schema::ValidationError => e
         raise(
           SchemaInvalidAttributesException,
-          "Invalid attributes found" \
-          "\n#{e.message}"
+          "Invalid attributes found",
+          e.message
         )
       end
     end
